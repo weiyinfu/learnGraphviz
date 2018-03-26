@@ -1,0 +1,9 @@
+digraph mygraph{
+    splines="line"#使用直线,默认使用曲线
+    node[shape=record]
+
+    one[label="<left>left|mid|<right>right"]
+    two[label="<one>one|<two>two|<three>three"]
+    one:left->two:two[dir=back arrowhead=normal arrowtail=normal headlabel=beg taillabel=end]
+    one:right->two:one[dir=back arrowhead=normal arrowtail=normal headlabel=beg taillabel=end]
+}

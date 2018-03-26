@@ -1,0 +1,7 @@
+graph MyGraph{ 
+    //这里是注释
+    rankdir=LR//方向为水平
+a--b--c--d--a
+b--d
+a--c
+}
