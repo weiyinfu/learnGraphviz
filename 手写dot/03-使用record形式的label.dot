@@ -1,0 +1,14 @@
+digraph structs {
+    /*
+    定义一棵树,这棵树有左右指针
+    尖括号<...>里面的内容表示索引,相当于锚点
+    */
+    node[shape=record]#这句话使得将label中的竖线解释成多个格子
+    //定义三个结点
+    struct1 [label="<f0> left|<f1> middle|<f2> right"];
+    struct2 [label="{<f0> one|<f1> two\n\n\n}" shape=Mrecord];
+    struct3 [label="hello\nworld |{<f1> b |{c|<here> d|e}| f}| g | h"];
+    //定义边
+    struct1:f1 -> struct2:f0;
+    struct1:f0 -> struct3:f1;
+}

@@ -1,9 +1,0 @@
-*.py eol=lf
-*.dot eol=lf
-*.txt eol=lf
-*.md eol=lf
-*.yml eol=lf
-
-*.png binary
-*.ps binary
-

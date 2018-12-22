@@ -1,0 +1,112 @@
+digraph Tree{
+    node[fontname="MICROSOFT YAHEI"]
+    #rankdir="LR"
+    老[shape=record label="<man> 老爷爷|<woman> 老奶奶" ]
+    爷爷奶奶[shape=record label="<man> 爷爷 | <woman> 奶奶"]
+    爸爸妈妈[shape=record label="<man> 爸爸 | <woman> 妈妈"]
+    舅舅舅妈[shape=record label="<man> 舅舅 | <woman> 舅妈"]
+    伯伯伯母[shape=record label="<man> 伯伯 | <woman> 伯母"]
+    叔叔婶婶[shape=record label="<man> 叔叔 | <woman> 婶婶"]
+    姑姑姑父[shape=record label="<man> 姑父 | <woman> 姑姑"]
+    姥爷姥姥[shape=record label="<man> 姥爷 | <woman> 姥姥"]
+    姨姨夫[shape=record label="<man> 姨夫 | <woman> 姨"]
+    哥哥嫂子[shape=record label="<man> 哥哥 | <woman> 嫂子"]
+    姐姐姐夫[shape=record label="<man> 姐夫 | <woman> 姐姐"]
+    我妻子[shape=record label="<man> 我 | <woman> 妻子"]
+    弟弟弟媳[shape=record label="<man> 弟弟 | <woman> 弟媳"]
+    妹妹妹夫[shape=record label="<man> 妹夫 | <woman> 妹妹"]
+    儿子儿媳[shape=record label="<man> 儿子 | <woman> 儿媳"]
+    女儿女婿[shape=record label="<man> 女婿 | <woman> 女儿"]
+    老->爷爷奶奶:man
+    爸爸妈妈->{哥哥嫂子:man 姐姐姐夫:woman 弟弟弟媳:man 我妻子:man 妹妹妹夫:woman}
+    爷爷奶奶->{伯伯伯母:man 叔叔婶婶:man 爸爸妈妈:man 姑姑姑父:woman}
+    姥爷姥姥->{爸爸妈妈:woman 舅舅舅妈:man 姨姨夫:woman}
+    舅舅舅妈->{表哥 表姐}
+    伯伯伯母->{堂姐 堂弟}
+    叔叔婶婶->{堂姐1[label=堂姐] 堂弟1[label=堂弟]}
+    哥哥嫂子->侄子
+    姐姐姐夫->外甥
+    姨姨夫->{表哥2[label=表哥] }
+    姑姑姑父->{表哥3 [label=表哥]}
+    弟弟弟媳->{侄子2[label=侄子]}
+    妹妹妹夫->外甥女
+    我妻子->{儿子儿媳:man 女儿女婿:woman}
+    儿子儿媳->{孙子 孙女}
+    女儿女婿->{外孙 外孙女}
+
+    GrandFather[label="Grand Father"]
+    GrandMother[label="Grand Mother"]
+    GrandFather2[label="Grand Father"]
+    GrandMother2[label="Grand Mother"] 
+    GrandFather->Father
+    GrandMother->Father
+    GrandFather2->Mother
+    GrandMother2->Mother 
+    Father->Me
+    Father->Brother
+    Father->Sister
+    Mother->Me
+    Mother->Brother
+    Mother->Sister
+
+    Uncle[label=Uncle]
+    Aunt[label=Aunt]
+    Uncle2[label=Uncle]
+    Aunt2[label=Aunt]
+    GrandFather->Uncle
+    GrandMother->Uncle
+    GrandFather->Aunt2
+    GrandMother->Aunt2
+    Uncle3[label=Uncle]
+    Aunt3[label=Aunt]
+    GrandFather2->Uncle3
+    GrandMother2->Uncle3
+    CousineBrother[label="Cousin Brother"]
+    Uncle3->CousineBrother
+    Aunt3->CousineBrother
+    Niece[label=Niece]
+    Nephew[label=Nephew]
+    Niece2[label=Niece]
+    Nephew2[label=Nephew]
+    BrotherInLaw[label="Brother-in-law"]
+    SisterInLaw[label="Sister-in-law"]
+    Sister->Niece
+    Sister->Nephew2
+    BrotherInLaw->Niece
+    BrotherInLaw->Nephew2
+    SisterInLaw->Nephew
+    SisterInLaw->Niece2
+    Brother->Nephew
+    Brother->Niece2
+    CousineBrother2[label="Cousine Brother"]
+    CousinSister2[label="Counsin Sister"]
+    CousineBrother3[label="Cousine Brother"]
+    CousinSister3[label="Counsin Sister"]
+    Uncle->CousineBrother2
+    Aunt->CousineBrother2
+    Uncle2->CousineBrother3
+    Aunt2->CousineBrother3
+    Uncle->CousinSister2
+    Aunt->CousinSister2
+    Uncle2->CousinSister3
+    Aunt2->CousinSister3
+    Wife->Son
+    Me->Son
+    Me->Daughter
+    Wife->Daughter
+    DaughterInLaw[label="Daughter in law"]
+    SonInLaw[label="Son in law"]
+    GrandSon[label="Grand Son"]
+    GrandDaughter[label="Grand Daughter"]
+    GrandSon2[label="Grand Son"]
+    GrandDaughter2[label="Grand Daughter"]
+    Son->GrandSon
+    DaughterInLaw->GrandSon
+    Son->GrandDaughter
+    DaughterInLaw->GrandDaughter
+    Daughter->GrandSon2
+    SonInLaw->GrandDaughter2
+    Daughter->GrandDaughter2
+    SonInLaw->GrandSon2
+
+}

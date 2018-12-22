@@ -1,0 +1,10 @@
+digraph{
+    node[fontname="Microsoft Yahei"]
+    tiger[label="" image="imgs/tiger.jpg" shape="none" width="1" height="1" fixedsize="true"]
+    lion[label="" image="imgs/lion.jpg" shape="none" width="1" height="1" fixedsize="true"]
+    jiaoma[label="" image="imgs/jiaoma.jpg" shape="none" width="1" height="1" fixedsize="true"]
+    lingyang[label="" image="imgs/lingyang.jpg" shape="none" width="1" height="1" fixedsize="true"]
+    grass[label="" image="imgs/cao.jpg" shape="none" width="1" height="1" fixedsize="true"]
+
+    {tiger,lion}->{jiaoma ,lingyang}->grass
+}

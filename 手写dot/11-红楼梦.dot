@@ -1,0 +1,36 @@
+digraph Tree{
+    /*
+    写树形图有两种思路:深度优先和广度优先,使用类似xml的语法来描述更好.
+    */
+    fontname="Microsoft Yahei"
+    node [shepe=box,fontname="Microsoft Yahei"]
+    贾演之父-> {贾演 贾源}
+    贾演->贾代化
+        贾代化->贾敬
+            贾珍[shape=record label="<jiazhen> 贾珍| <youshi> 尤氏"]
+            贾敬->{贾珍:jiazhen 贾惜春}
+                贾珍:youshi->贾蓉
+    贾代善贾母[shape=record label="<jiadaishan> 贾代善 | <jiamu> 贾母(史太君) "]
+    贾源->贾代善贾母:jiadaishan
+        贾政[shape=record label="<jiazheng> 贾政 | <wangfuren> 王夫人 | <zhaoyiniang> 赵姨娘"]
+        贾赦[shape=record label="<jiashe> 贾赦 | <qianqi> 前妻 | <qianqie> 前妾" ]
+        贾敏林如海[shape=record label="<linruhai> 林如海 | <jiamin> 贾敏"]
+        贾代善贾母->贾政:jiazheng
+        贾代善贾母->贾赦:jiashe
+        贾代善贾母->贾敏林如海:jiamin
+            贾琏[shape=record label="<jialian> 贾琏 | <wangxifeng> 王熙凤"]
+            贾赦:qianqi->贾琏:jialian  
+                贾琏->巧姐
+            贾赦:qianqie->贾迎春
+            贾政:wangfuren->{贾珠 贾元春 贾宝玉 }
+                贾珠[shape=record label="<jiazhu> 贾珠 | <liwan> 李纨"]
+                贾珠->贾兰
+            贾政:zhaoyiniang->{探春 贾环}
+            贾敏林如海->林黛玉
+    王夫人之父->{ 贾政:wangfuren  薛姨妈 王熙凤之父}
+        薛姨妈->{薛蟠 薛宝钗}
+        王熙凤之父->贾琏:wangxifeng
+    贾母之父->{贾代善贾母:jiamu 史湘云之祖父}
+    史湘云之祖父->史湘云之父->史湘云
+
+}

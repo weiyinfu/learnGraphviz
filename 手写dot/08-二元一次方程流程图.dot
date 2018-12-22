@@ -1,0 +1,24 @@
+digraph equation2{
+    splines="line"#让所有边都是用直线，不使用曲线
+    node[fontname="Microsoft Yahei"]
+    edge[fontname="Microsoft Yahei"]
+    
+    input[shape=parallelogram label="输入a,b,c三个参数"]
+    get_delta[shape=rectangle label="求delta=b^2-4ac"]
+    judge[shape=diamond label="判断delta是否大于0"]
+    greater[shape=rectangle label="x1=(-b+-sqrt(delta))/2"]
+    no_greater[shape=diamond label="判断delta是否等于0"]
+    equal[shape=rectangle label="方程只有一个根x=-b/(2a)"]
+    smaller[shape=rectangle label="方程没有根"]
+    over[shape=parallelogram label="结束"]
+
+    input->get_delta
+    get_delta->judge
+    judge->greater[label=yes]
+    greater->over
+    judge->no_greater[label=no]
+    no_greater->equal[label=yes]
+    equal->over
+    no_greater->smaller[label=no]
+    smaller->over
+}

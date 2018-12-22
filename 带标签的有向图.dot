@@ -1,5 +1,0 @@
-digraph Mygraph{
-    father[label=papa,shape=box]
-    mother[label=mother]
-    {father,mother}->me[label=child,fontcolor=red]
-}
