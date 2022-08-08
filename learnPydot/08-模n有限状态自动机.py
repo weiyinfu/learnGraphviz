@@ -23,7 +23,7 @@ def export(g)->pydot.Dot:
 
 
 def main():
-    n = 4
+    n = 7
     g = build(n)
     dot = export(g)
     filename = __file__ + '.jpg'
